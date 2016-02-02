@@ -1,0 +1,42 @@
+# Translated initially by DS-minetest.
+# No sure correct translation.
+
+GPS = GPS
+
+Localizar = Orten
+
+Destinos = Zielpunkte
+
+Destino = Zielpunkt
+
+Desligar = Ausschalten
+
+Deletar = Löschen
+
+Novo Destino = Neuer Zielpunkt
+
+Nome Desse Lugar = Mein Ort
+
+Gravar Novo Destino = Speichere neuen Ort
+
+Precisa estar com o GPS para ir ao destino. = Du musst das GPS dabei haben um zum Zielpunkt zu gehen.
+
+GPS Ativado. Destino @1 localizado. = GPS eingeschaltet. @1 georted.
+
+Nenhum destino encontrado. Defina novos destinos. = Kein Zielpunkt gefunden. Setze einen neuen!
+
+GPS desligado. = GPS ausgeschaltet.
+
+Nenhum nome definido para o lugar. Digite um nome. = Der Ort hat keinen Namen. Benenne ihn!
+
+Limite de @1 destinos no seu GPS. Delete algum dos ja existentes. = Das Limit sind @1 Zielort(e). Lösche einen der Existierenden!
+
+Lugar @1 foi gravado no seu GPS. = @1 wurde in deinem GPS registriert.
+
+Caracteres invalidos. Tente utilizar apenas letras e numeros no novo nome. = Ungültige Zeichen. Versuche nur Buchstaben und Nummern im neuen namen!
+
+Nenhum nome especificado para o novo lugar. Defina o nome desse lugar. = Es wurde Kein Name für den neuenb Ort festgelegt. Benenne diesen Ort!
+
+Destino @1 deletado. = @1 wurde gelöscht.
+
+Nenhum destino para deletar. = Es gibt keine Zielpunkte zum löschen.
