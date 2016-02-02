@@ -183,7 +183,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		if fields.ir then
 			if registros[name].destinos[fields.destino] then
 				adicionar_waypoint(name, fields.destino)
-				minetest.chat_send_player(name, S("GPS Ativado. Destino").." "..fields.destino.." "..S("localizado."))
+				minetest.chat_send_player(name, S("GPS Ativado. Destino @1 localizado.", fields.destino))
 				minetest.sound_play("gps_beep", {gain = 0.15, max_hear_distance = 3, object = player})
 				return true
 			else
@@ -214,13 +214,13 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 						total = total + 1
 					end
 					if total >= LIMITE then
-						minetest.chat_send_player(name, S("Limite de").." "..LIMITE.." "..S("destinos no seu GPS. Delete algum dos ja existentes."))
+						minetest.chat_send_player(name, S("Limite de @1 destinos no seu GPS. Delete algum dos ja existentes.", LIMITE))
 						return true
 					end
 					registros[name].destinos[fields.nome_destino] = player:getpos()
 					atualizar_string(name)
 					salvar_dados(name)
-					minetest.chat_send_player(name, S("Lugar").." "..fields.nome_destino.." "..S("foi gravado no seu GPS."))
+					minetest.chat_send_player(name, S("Lugar @1 foi gravado no seu GPS.", fields.nome_destino))
 					-- Caso ja tenha e esteja ativo entao ajusta o waypoint visualizado
 					if tonumber(waypoints[name]) and player:hud_get(waypoints[name]) then
 						local def = player:hud_get(waypoints[name])
@@ -249,7 +249,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 				registros[name].destinos = destinos_restantes
 				atualizar_string(name)
 				salvar_dados(name)
-				minetest.chat_send_player(name, S("Destino").." "..fields.destino.." "..S("deletado."))
+				minetest.chat_send_player(name, S("Destino @1 deletado.", fields.destino))
 				return true
 			else
 				minetest.chat_send_player(name, S("Nenhum destino para deletar."))

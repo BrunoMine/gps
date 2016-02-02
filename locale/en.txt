@@ -15,15 +15,13 @@ Deletar = Delete
 
 Novo Destino = New Destination
 
-Nome Desse Lugar = Name of This Place
+Nome Desse Lugar = My Place
 
 Gravar Novo Destino = Save New Place
 
 Precisa estar com o GPS para ir ao destino. = You need to be with the GPS to go to the destination.
 
-GPS Ativado. Destino = GPS Active.
-# Name os destination
-localizado. = located.
+GPS Ativado. Destino @1 localizado. = GPS Active. @1 located.
 
 Nenhum destino encontrado. Defina novos destinos. = No destination found. Set a new.
 
@@ -31,18 +29,14 @@ GPS desligado. = GPS turned off.
 
 Nenhum nome definido para o lugar. Digite um nome. = No name set to the place. Enter a name.
 
-Limite de = Limit is
-# Limit number of destinations
-destinos no seu GPS. Delete algum dos ja existentes. = destinations. Delete any of the already existing.
+Limite de @1 destinos no seu GPS. Delete algum dos ja existentes. = Limit is @1 destinations. Delete any of the already existing.
 
-Lugar = The
-# Name of locate
-foi gravado no seu GPS. = has been recorded in your GPS.
+Lugar @1 foi gravado no seu GPS. = @1 has been recorded in your GPS.
 
 Caracteres invalidos. Tente utilizar apenas letras e numeros no novo nome. = Invalid characters. Try using only letters and numbers in the new name.
 
 Nenhum nome especificado para o novo lugar. Defina o nome desse lugar. = No name specified for the new place. Set the name of this place.
 
-deletado. = has been deleted.
+Destino @1 deletado. = @1 has been deleted.
 
 Nenhum destino para deletar. = No destinations to delete.
