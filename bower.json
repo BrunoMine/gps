@@ -1,0 +1,15 @@
+{
+    "name": "gps",
+    "description": "GPS para sobreviv\u00eancia. ",
+    "keywords": [
+        "gps"
+    ],
+    "homepage": "https://github.com/BrunoMine/gps",
+    "forum": "https://forum.minetest.net/viewtopic.php?t=1",
+    "screenshots": [
+        "https://raw.githubusercontent.com/BrunoMine/gps/master/screenshot.png"
+    ],
+    "authors": [
+        "BrunoMine"
+    ]
+}
