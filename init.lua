@@ -18,6 +18,104 @@ else
 	S = function(s,a,...)if a==nil then return s end a={a,...}return s:gsub("(@?)@(%(?)(%d+)(%)?)",function(e,o,n,c)if e==""then return a[tonumber(n)]..(o==""and c or"")else return"@"..o..n..c end end) end
 end
 
+
+-- Verificar texto sem caracteres
+check_null_valid_text = function(s)
+	if s == nil then return false end
+	for char in string.gmatch(s, "%a") do
+		return true
+	end
+	return false
+end
+
+-- Caracteres validos
+local valid_chars = {
+	-- Maiusculos
+	["A"] = true,
+	["B"] = true,
+	["C"] = true,
+	["D"] = true,
+	["E"] = true,
+	["F"] = true,
+	["G"] = true,
+	["H"] = true,
+	["I"] = true,
+	["J"] = true,
+	["K"] = true,
+	["L"] = true,
+	["M"] = true,
+	["N"] = true,
+	["O"] = true,
+	["P"] = true,
+	["Q"] = true,
+	["R"] = true,
+	["S"] = true,
+	["T"] = true,
+	["U"] = true,
+	["V"] = true,
+	["W"] = true,
+	["X"] = true,
+	["Y"] = true,
+	["Z"] = true,
+	-- Minusculos
+	["a"] = true,
+	["b"] = true,
+	["c"] = true,
+	["d"] = true,
+	["e"] = true,
+	["f"] = true,
+	["g"] = true,
+	["h"] = true,
+	["i"] = true,
+	["j"] = true,
+	["k"] = true,
+	["l"] = true,
+	["m"] = true,
+	["n"] = true,
+	["o"] = true,
+	["p"] = true,
+	["q"] = true,
+	["r"] = true,
+	["s"] = true,
+	["t"] = true,
+	["u"] = true,
+	["v"] = true,
+	["w"] = true,
+	["x"] = true,
+	["y"] = true,
+	["z"] = true,
+	-- Caracteres especiais
+	[" "] = true
+}
+
+-- Verificar nome do grupo
+check_text = function(text)
+	-- Verifica comprimento
+	if string.len(text) > 30 or string.len(text) == 0 then
+		return false
+	end
+	
+	-- Verifica se existe ao menos um caracter valido
+	if check_null_valid_text(text) == true then
+		return false
+	end
+	
+	-- Verifica caracteres validos
+	local text_valido = ""
+	for char in string.gmatch(text, ".") do
+		if valid_chars[char] then
+			text_valido = text_valido .. char
+		end
+	end
+	if text ~= text_valido then
+		return false
+	end
+	
+	return true
+end
+
+
+
 --
 -----
 --------
@@ -203,6 +301,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 					and not fields.nome_destino:find(",") 
 					and not fields.nome_destino:find("\\") 
 					and not fields.nome_destino:find("\"")
+					and check_text(fields.nome_destino) == true
 				then
 					if fields.nome_destino == "" then
 						minetest.chat_send_player(name, S("Nenhum nome definido para o lugar. Digite um nome."))
