@@ -22,7 +22,7 @@ end
 -- Verificar texto sem caracteres
 check_null_valid_text = function(s)
 	if s == nil then return false end
-	for char in string.gmatch(s, "%a") do
+	for char in string.gmatch(s, ".") do
 		return true
 	end
 	return false
@@ -90,13 +90,14 @@ local valid_chars = {
 
 -- Verificar nome do grupo
 check_text = function(text)
+	
 	-- Verifica comprimento
 	if string.len(text) > 30 or string.len(text) == 0 then
 		return false
 	end
 	
 	-- Verifica se existe ao menos um caracter valido
-	if check_null_valid_text(text) == true then
+	if check_null_valid_text(text) == false then
 		return false
 	end
 	
